@@ -29,11 +29,11 @@ addSymbolO(space) {
 }
 }
 
-//create players i.e. 2 for the game
+//create players
 const player1 = new Player();
 const player2 = new Player();
 
-//create spaces for all the 9 blocks
+//create spaces
 const space1 = new Space('one');
 const space2 = new Space('two');
 const space3 = new Space('three');
@@ -44,13 +44,13 @@ const space7 = new Space('seven');
 const space8 = new Space('eight');
 const space9 = new Space('nine');
 
-//switch turns between the players
+//switch turns
 function switchTurns(one, two) {
 one.isTurn = true;
 two.isTurn = false;
 }
 
-//gameplay for both the players
+//gameplay
 player1.isTurn = true;
 
 $('.grid').on('click', (e) => {
@@ -235,8 +235,8 @@ if(player1.win !== true && player2.win !== true) {
      }   
   }
 
-  //check if player1 wins
-  // code for top row
+  //check if playerX wins
+  // top row
   if(board[0][0] === "x" && board[0][1] === "x" && board[0][2] === "x") {
     $('.header').text('Player One Wins!');
     $('.header').css('color', 'tomato');
@@ -244,7 +244,7 @@ if(player1.win !== true && player2.win !== true) {
     p1Counter += 1;
     player1.win = true;
   }  
-  // code for middle row
+  // middle row 
   else if (board[1][0] === "x" && board[1][1] === "x" && board[1][2] === "x") {
     $('.header').text('Player One Wins!');
     $('.header').css('color', 'tomato');
@@ -252,7 +252,7 @@ if(player1.win !== true && player2.win !== true) {
     p1Counter += 1;
     player1.win = true;
   }
-  // code for bottom row
+  // bottom row
   else if (board[2][0] === "x" && board[2][1] === "x" && board[2][2] === "x") {
     $('.header').text('Player One Wins!'); 
     $('.header').css('color', 'tomato');
@@ -260,7 +260,7 @@ if(player1.win !== true && player2.win !== true) {
     p1Counter += 1;
     player1.win = true;
   }
-  // first column of the matrix
+  // first column
   else if (board[0][0] === 'x' && board[1][0] === 'x' && board[2][0] === 'x') {
     $('.header').text('Player One Wins!'); 
     $('.header').css('color', 'tomato');
@@ -268,7 +268,7 @@ if(player1.win !== true && player2.win !== true) {
     p1Counter += 1;
     player1.win = true;
   }
-  // second column of the matrix
+  // second column
   else if (board[0][1] === 'x' && board[1][1] === 'x' && board[2][1] === 'x') {
     $('.header').text('Player One Wins!'); 
     $('.header').css('color', 'tomato');
@@ -276,7 +276,7 @@ if(player1.win !== true && player2.win !== true) {
     p1Counter += 1;
     player1.win = true;
   }
-  // third column of the matrix
+  // third column
   else if (board[0][2] === 'x' && board[1][2] === 'x' && board[2][2] === 'x') {
     $('.header').text('Player One Wins!'); 
     $('.header').css('color', 'tomato');
@@ -284,7 +284,7 @@ if(player1.win !== true && player2.win !== true) {
     p1Counter += 1;
     player1.win = true;
   }
-  // diaganol right of the matrix
+  // diaganol right
   else if (board[0][0] === 'x' && board[1][1] === 'x' && board[2][2] === 'x') {
     $('.header').text('Player One Wins!');  
     $('.header').css('color', 'tomato');
@@ -292,7 +292,7 @@ if(player1.win !== true && player2.win !== true) {
     p1Counter += 1;
     player1.win = true;
   }
-  // diaganol left of the matrix
+  // diaganol left
   else if (board[0][2] === 'x' && board[1][1] === 'x' && board[2][0] === 'x') {
     $('.header').text('Player One Wins!'); 
     $('.header').css('color', 'tomato');
@@ -303,7 +303,7 @@ if(player1.win !== true && player2.win !== true) {
 
   // check if player 2 wins
 
-  //top row of the matrix
+  //top row
   if(board[0][0] === "o" && board[0][1] === "o" && board[0][2] === "o") {
     $('.header').text('Player Two Wins!');
     $('.header').css('color', '#33DBFF');
@@ -311,7 +311,7 @@ if(player1.win !== true && player2.win !== true) {
     p2Counter += 1;
     player2.win = true;
   }  
-  // middle row of the matrix 
+  // middle row 
   else if (board[1][0] === "o" && board[1][1] === "o" && board[1][2] === "o") {
     $('.header').text('Player Two Wins!');  
     $('.header').css('color', '#33DBFF');
@@ -319,7 +319,7 @@ if(player1.win !== true && player2.win !== true) {
     p2Counter += 1;
     player2.win = true;
   }
-  // bottom row of the matrix
+  // bottom row
   else if (board[2][0] === "o" && board[2][1] === "o" && board[2][2] === "o") {
     $('.header').text('Player Two Wins!');   
     $('.header').css('color', '#33DBFF');
@@ -327,7 +327,7 @@ if(player1.win !== true && player2.win !== true) {
     p2Counter += 1;
     player2.win = true;
   }
-  // first column of the matrix
+  // first column
   else if (board[0][0] === 'o' && board[1][0] === 'o' && board[2][0] === 'o') {
     $('.header').text('Player Two Wins!'); 
     $('.header').css('color', '#33DBFF');
@@ -335,7 +335,7 @@ if(player1.win !== true && player2.win !== true) {
     p2Counter += 1;
     player2.win = true;
   }
-  // second column of the matrix
+  // second column
   else if (board[0][1] === 'o' && board[1][1] === 'o' && board[2][1] === 'o') {
     $('.header').text('Player Two Wins!');  
     $('.header').css('color', '#33DBFF');
@@ -343,7 +343,7 @@ if(player1.win !== true && player2.win !== true) {
     p2Counter += 1;
     player2.win = true;
   }
-  // third column of the matrix
+  // third column
   else if (board[0][2] === 'o' && board[1][2] === 'o' && board[2][2] === 'o') {
     $('.header').text('Player Two Wins!');  
     $('.header').css('color', '#33DBFF');
@@ -351,7 +351,7 @@ if(player1.win !== true && player2.win !== true) {
     p2Counter += 1;
     player2.win = true;
   }
-  // diaganol right of the matrix
+  // diaganol right
   else if (board[0][0] === 'o' && board[1][1] === 'o' && board[2][2] === 'o') {
     $('.header').text('Player Two Wins!');  
     $('.header').css('color', '#33DBFF');
@@ -359,7 +359,7 @@ if(player1.win !== true && player2.win !== true) {
     p2Counter += 1;
     player2.win = true;
   }
-  // diaganol left of the matrix
+  // diaganol left
   else if (board[0][2] === 'o' && board[1][1] === 'o' && board[2][0] === 'o') {
     $('.header').text('Player Two Wins!');    
     $('.header').css('color', '#33DBFF');
@@ -370,7 +370,6 @@ if(player1.win !== true && player2.win !== true) {
 }
 });
 
-// reset function
 
 $('.reset').on('click', () => {
 player1.isTurn = true;
