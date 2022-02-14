@@ -1,3 +1,61 @@
+.space-hover{
+    background-color: rgba(0,0,0,0);
+}
+.x,.o{
+    font-family: 'arial';
+    font-size: 20px;
+    position: absolute;
+}
+.x{
+    color: tomato;
+}
+.o{
+    color: #33D8FF;
+}
+.header{
+    font-family: 'IBM Plex Sans Condensed',sans-serif;
+    font-family: 'Montessart',sans-serif;
+    font-size: 35px;
+    color:tomato;
+    text-align: center;
+    margin-top: 50px;
+}
+.reset{
+    font-size: 20px;
+    font-family: 'IBM Plex Sans Condensed',sans-serif ;
+    font-family: 'Montessart',sans-serif;
+    color:tomato;
+    background-color: white;
+    border: 1px solid tomato;
+    padding: 5px;
+    transition: border, color, .5s;
+
+
+}
+
+.reset-hover{
+    cursor: pointer;
+    color: #33D8FF;
+    border: 1px solid #33D8FF ;
+    transition: border, color, .5s;
+
+}
+
 body{
-    background-color: blue;
+    background-color: white;
+}
+
+.grid{
+    background-color: rgba(0,0,0,0);
+    margin: 50px auto;
+    vertical-align: center;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-gap: 2px;
+    border-radius: 4px;
+    box-shadow: rgba(0,0,0,0);
+    
 }
